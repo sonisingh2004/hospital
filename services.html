@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Services — Healthca Clinic</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQnIfm2oeI4yxgHvLIy1f7kcOBYwX55XRZw&s" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #eaf6ff 0%, #f2f7fd 100%);
+      min-height: 100vh;
+    }
+    .page-header {
+      background: #4b6ef2;
+      color: #fff;
+      padding: 55px 0 38px 0;
+      border-radius: 0 0 38px 38px;
+      box-shadow: 0 4px 32px rgba(44,92,220,0.09);
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .services-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(50,90,180,0.09);
+      padding: 42px 36px;
+      color: #224;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+    .service-card {
+      background: #f6fafd;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(44,94,220,.07);
+      padding: 28px 22px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(44,94,220,.15);
+    }
+    .service-card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 16px;
+    }
+    .service-card h5 {
+      font-weight: 700;
+      color: #2746af;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.98rem;
+      color: #555;
+    }
+    .detailed-service {
+      margin-top: 60px;
+    }
+    .detailed-service .row {
+      margin-bottom: 40px;
+      align-items: center;
+    }
+    .detailed-service img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(50,90,180,0.1);
+    }
+    .detailed-service h3 {
+      color: #4154af;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .detailed-service p {
+      font-size: 1.07rem;
+      color: #333;
+    }
+    .back-btn {
+      margin-top: 40px;
+      border-radius: 30px;
+      font-weight: 600;
+      background: #4b6ef2;
+      color: #fff;
+      padding: 12px 29px;
+      transition: background .3s;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .back-btn:hover {
+      background: #2746af;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .services-section {
+        padding: 28px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Topbar Start -->
+  <div class="topbar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-2">
+      <!-- Left: Contact Info with Branch Dropdown -->
+      <div class="topbar-left d-flex flex-column flex-md-row align-items-center">
+
+        <!-- Branch Dropdown -->
+        <div class="dropdown me-md-4 mb-2 mb-md-0">
+          <i class="bi bi-geo-alt-fill text-primary me-1"></i>
+          <a class="dropdown-toggle text-white" href="#" id="branchDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Select Branch
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="branchDropdown">
+            <li><a class="dropdown-item" href="#Bhubaneswar">Bhubaneswar</a></li>
+            <li><a class="dropdown-item" href="#Khordha">Khordha</a></li>
+            <li><a class="dropdown-item" href="#Puri">Puri</a></li>
+            <li><a class="dropdown-item" href="#Cuttack">Cuttack</a></li>
+            <li><a class="dropdown-item" href="#Paradeep">Paradeep</a></li>
+          </ul>
+        </div>
+
+
+        <!-- Phone & Email -->
+        <div class="me-md-4 mb-2 mb-md-0">
+          <i class="bi bi-telephone-fill text-primary me-1"></i>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="mb-2 mb-md-0">
+          <i class="bi bi-envelope-fill text-primary me-1"></i>
+          <span>info@healthcarehospital.com</span>
+        </div>
+      </div>
+
+      <!-- Right: Social & Working Hours -->
+      <div class="topbar-right d-flex flex-column flex-md-row align-items-center">
+        <div class="me-md-3 mb-2 mb-md-0">
+          <i class="bi bi-clock-fill text-primary me-1"></i>
+          <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+        </div>
+        <div class="social-icons d-flex gap-2">
+          <a href="#" class="social-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Connect on LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQnIfm2oeI4yxgHvLIy1f7kcOBYwX55XRZw&s" alt="Healthca Logo" style="height: 40px; margin-right: 10px;">
+        Healthca
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span><i class="fa-solid fa-bars text-white"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center flex-column " id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about-us.html">About Us</a></li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Service
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+              <li><a class="dropdown-item" href="./services.html"><i class="fa fa-list-alt me-1"></i> Services</a></li>
+              <li><a class="dropdown-item" href="./single-service.html"><i class="fa fa-stethoscope me-1"></i> Single
+                  Service</a></li>
+            </ul>
+          </li> -->
+           <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="./help.html">Help</a></li>
+        </ul>
+        <div class="scrolling bg-primary border-radius rounded-4 d-flex ms-5 py-1 px-4">
+					<marquee class="text-white">“ Hospital offers its patients best in class healthcare facilities addressing the capacity, safety, quality and wait-time issues becoming the first of its kind in the state.”</marquee>
+			  </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Our Services</h1>
+    <p>Comprehensive care designed to meet all your medical needs.</p>
+  </header>
+  <main class="services-section">
+    <h2 class="text-center mb-4" style="color:#2746af; font-weight:700;">What We Offer</h2>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Cardiology">
+        <h5>Cardiology</h5>
+        <p>Advanced heart care with modern diagnostic tools and experienced cardiologists.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471683.png" alt="Dental Care">
+        <h5>Dental Care</h5>
+        <p>Gentle and effective dental treatments for all ages in a calm, caring environment.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966499.png" alt="Neurology">
+        <h5>Neurology</h5>
+        <p>Expert care for neurological disorders, migraines, and nerve conditions.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966500.png" alt="Pediatrics">
+        <h5>Pediatrics</h5>
+        <p>Compassionate child healthcare to ensure a bright and healthy future.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471674.png" alt="Orthopedics">
+        <h5>Orthopedics</h5>
+        <p>Specialized bone and joint treatments for injuries, arthritis, and mobility issues.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471697.png" alt="Emergency Care">
+        <h5>Emergency Care</h5>
+        <p>24/7 emergency support to handle critical medical situations efficiently.</p>
+      </div>
+    </div>
+
+    <section class="detailed-service mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://parashospitals-web.s3.ap-south-1.amazonaws.com/blogs/September2024/1726576058Interventional-Cardiology.jpg" alt="Cardiology Service">
+        </div>
+        <div class="col-md-6">
+          <h3>Advanced Cardiology</h3>
+          <p>Our cardiology department provides comprehensive cardiac evaluations, non-invasive imaging, and rehabilitation programs designed to improve heart health and longevity.</p>
+          <a href="single-service.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
+        </div>
+      </div>
+      <div class="row flex-md-row-reverse">
+        <div class="col-md-6">
+          <img src="https://content.jdmagicbox.com/comp/malappuram/w8/9999px483.x483.190131113104.q1w8/catalogue/dr-arshads-modern-dental-care-malappuram-0wmbj583v9.jpg" alt="Dental Service">
+        </div>
+        <div class="col-md-6">
+          <h3>Modern Dental Care</h3>
+          <p>We combine gentle care with cutting-edge technology to ensure your smile stays bright and healthy — from regular cleanings to advanced cosmetic procedures.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="index.html" class="btn back-btn">← Back to Home</a>
+      
+    </div>
+  </main>
+<!-- Book Appointment Modal -->
+  <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="bookModalLabel">Book Appointment</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <form id="appointmentForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="date" class="form-label">Appointment Date</label>
+              <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="mb-3">
+              <label for="time" class="form-label">Preferred Time</label>
+              <input type="time" class="form-control" id="time" required>
+            </div>
+            <button type="submit" class="btn btn-getstarted w-100">Confirm Appointment</button>
+          </form>
+
+          <div id="successMessage" class="text-center p-4 d-none animate__animated animate__fadeInUp">
+            <i class="fa-solid fa-circle-check text-success fa-3x mb-3"></i>
+            <h5 class="fw-bold text-success">Appointment Confirmed!</h5>
+            <p class="mb-3 text-muted">We’ve received your details. Our team will contact you soon.</p>
+            <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="./index.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQnIfm2oeI4yxgHvLIy1f7kcOBYwX55XRZw&s" alt="Healthca Logo" style="height: 40px; margin-right: 10px;">
+            Healthca
+          </a>
+          <p class="mb-3">Providing compassionate and high-quality healthcare services to our community. Your health is our priority.</p>
+          <div class="social-icons">
+            <a href="#" class="social-link me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="./about-us.html" class="text-white text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li class="mb-2"><a href="./contact.html" class="text-white text-decoration-none">Contact</a></li>
+            <li class="mb-2"><a href="./help.html" class="text-white text-decoration-none">Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Services</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">General Medicine</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Pediatrics</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Cardiology</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Emergency Care</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Contact Us</h5>
+          <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</p>
+          <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i>info@healthcarehospital.com</p>
+          <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Bhubaneswar, Odisha, India</p>
+          <p class="mb-0"><i class="bi bi-clock-fill me-2"></i>Mon - Sat: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 HealthCare. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
