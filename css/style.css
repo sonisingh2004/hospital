@@ -212,7 +212,7 @@ html{
   margin: 0;
 }
 .hero {
-  background: url('https://aed.co.in/data/gallery/main_f892e.jpg') center center/cover no-repeat;
+  background: url('/assets/hospital1.jpeg') center center/cover no-repeat;
   position: relative;
   min-height: 100vh;
   color: #fff;
