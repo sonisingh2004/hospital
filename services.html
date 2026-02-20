@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -56,10 +65,24 @@
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(44,94,220,.15);
     }
-    .service-card img {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 16px;
+    .service-icon {
+      font-size: 3.5rem;
+      color: #4b6ef2;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #e8f0ff 0%, #f0f6ff 100%);
+      border-radius: 50%;
+    }
+    .service-card:hover .service-icon {
+      color: #0a3b88;
+      transform: scale(1.15) rotateY(360deg);
+      background: linear-gradient(135deg, #4b6ef2 0%, #2746af 100%);
+      color: #fff;
     }
     .service-card h5 {
       font-weight: 700;
@@ -74,7 +97,7 @@
       margin-top: 60px;
     }
     .detailed-service .row {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       align-items: center;
     }
     .detailed-service img {
@@ -82,10 +105,17 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(50,90,180,0.1);
     }
+    .service-detail-icon {
+      font-size: 2.5rem;
+      color: #0a3b88;
+      margin-bottom: 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
     .detailed-service h3 {
       color: #4154af;
       font-weight: 700;
       margin-bottom: 14px;
+      margin-top: 10px;
     }
     .detailed-service p {
       font-size: 1.07rem;
@@ -110,6 +140,9 @@
     @media (max-width: 768px) {
       .services-section {
         padding: 28px 16px;
+      }
+      .detailed-service .row {
+        margin-bottom: 40px;
       }
     }
   </style>
@@ -137,7 +170,6 @@
             <li><a class="dropdown-item" href="#Paradeep">Paradeep</a></li>
           </ul>
         </div>
-  
   
         <!-- Phone & Email -->
         <div class="me-md-4 mb-2 mb-md-0">
@@ -172,6 +204,7 @@
     </div>
   </div>
   <!-- Topbar End -->
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
     <div class="container">
@@ -188,23 +221,12 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="./about-us.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="./services.html">Service</a></li>
-          <!-- <li class="nav-item dropdown"> -->
-          <!-- <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Service
-              </a> -->
-          <!-- <ul class="dropdown-menu" aria-labelledby="serviceDropdown"> -->
-          <!-- <li><a class="dropdown-item" href="services.html"><i class="fa fa-list-alt me-1"></i> Service</a></li> -->
-          <!-- <li><a class="dropdown-item" href="single-service.html"><i class="fa fa-stethoscope me-1"></i> Single
-                    Service</a></li> -->
-          <!-- </ul> -->
-          <!-- </li> -->
           <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="./help.html">Help</a></li>
         </ul>
         <div class="scrolling bg-primary border-radius rounded-4 d-flex ms-5 py-1 px-4">
-          <marquee class="text-white">“ Hospital offers its patients best in class healthcare facilities addressing the
-            capacity, safety, quality and wait-time issues becoming the first of its kind in the state.”</marquee>
+          <marquee class="text-white">" Hospital offers its patients best in class healthcare facilities addressing the
+            capacity, safety, quality and wait-time issues becoming the first of its kind in the state."</marquee>
         </div>
       </div>
     </div>
@@ -214,184 +236,216 @@
     <h1>Our Services</h1>
     <p>Comprehensive care designed to meet all your medical needs.</p>
   </header>
+  
   <main class="services-section">
     <h2 class="text-center mb-4" style="color:#2746af; font-weight:700;">What We Offer</h2>
 
     <div class="service-grid">
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Cardiology">
-        <h5>Cardiology</h5>
-        <p>Advanced heart care with modern diagnostic tools and experienced cardiologists.</p>
+        <div class="service-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+        <h5>24*7 Emergency</h5>
+        <p>Round-the-clock emergency medical services for all urgent needs.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471683.png" alt="Dental Care">
-        <h5>Dental Care</h5>
-        <p>Gentle and effective dental treatments for all ages in a calm, caring environment.</p>
+        <div class="service-icon"><i class="bi bi-truck-front"></i></div>
+        <h5>24*7 Ambulance</h5>
+        <p>Fast and reliable emergency ambulance service anytime, day or night.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966499.png" alt="Neurology">
-        <h5>Neurology</h5>
-        <p>Expert care for neurological disorders, migraines, and nerve conditions.</p>
+        <div class="service-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+        <h5>24*7 CT Scan</h5>
+        <p>Advanced CT scan facilities available round the clock for diagnostics.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966500.png" alt="Pediatrics">
-        <h5>Pediatrics</h5>
-        <p>Compassionate child healthcare to ensure a bright and healthy future.</p>
+        <div class="service-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+        <h5>24*7 Pathology & Radiology</h5>
+        <p>Complete diagnostic services including pathology and radiology 24/7.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471674.png" alt="Orthopedics">
-        <h5>Orthopedics</h5>
-        <p>Specialized bone and joint treatments for injuries, arthritis, and mobility issues.</p>
+        <div class="service-icon"><i class="bi bi-capsule"></i></div>
+        <h5>24*7 Pharmacy</h5>
+        <p>In-house pharmacy with 24/7 availability for all medication needs.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471697.png" alt="Emergency Care">
-        <h5>Emergency Care</h5>
-        <p>24/7 emergency support to handle critical medical situations efficiently.</p>
+        <div class="service-icon"><i class="bi bi-hospital"></i></div>
+        <h5>ICU & HDU Services</h5>
+        <p>State-of-the-art Intensive Care Unit with expert staff.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-bone"></i></div>
+        <h5>Orthopedic Surgery</h5>
+        <p>Expert orthopedic care for fractures, joints, and bone conditions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-scissors"></i></div>
+        <h5>General Surgery</h5>
+        <p>Comprehensive surgical services handled by experienced surgeons.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+        <h5>Neuro Surgery</h5>
+        <p>Specialized neurological and spinal surgeries with advanced technology.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+        <h5>Spinal Surgery</h5>
+        <p>Expert spinal surgeries for back pain, deformities, and disorders.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h5>Urology Surgery</h5>
+        <p>Specialized urological care for urinary tract problems.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-hand-index-thumb"></i></div>
+        <h5>Plastic Surgery</h5>
+        <p>Cosmetic and reconstructive plastic surgery by board-certified surgeons.</p>
       </div>
     </div>
 
     <section class="detailed-service mt-5">
+      <h2 class="text-center mb-5" style="color:#2746af; font-weight:700;">Featured Services</h2>
+      
       <div class="row">
         <div class="col-md-6">
-          <img src="https://parashospitals-web.s3.ap-south-1.amazonaws.com/blogs/September2024/1726576058Interventional-Cardiology.jpg" alt="Cardiology Service">
+          <img src="/assets/handmachin.jpeg" alt="Cardiology Service">
         </div>
         <div class="col-md-6">
+          <div class="service-detail-icon"><i class="bi bi-heart-pulse"></i></div>
           <h3>Advanced Cardiology</h3>
-          <p>Our cardiology department provides comprehensive cardiac evaluations, non-invasive imaging, and rehabilitation programs designed to improve heart health and longevity.</p>
-          <a href="single-service.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
+          <p>Comprehensive cardiac evaluations and rehabilitation programs designed to improve heart health and longevity with state-of-the-art technology.</p>
         </div>
       </div>
-      <div class="row flex-md-row-reverse">
+      
+      <div class="row flex-md-row-reverse mt-5 pt-4">
         <div class="col-md-6">
-          <img src="https://content.jdmagicbox.com/comp/malappuram/w8/9999px483.x483.190131113104.q1w8/catalogue/dr-arshads-modern-dental-care-malappuram-0wmbj583v9.jpg" alt="Dental Service">
+          <img src="/assets/emergency.jpeg" alt="Emergency Care">
         </div>
         <div class="col-md-6">
-          <h3>Modern Dental Care</h3>
-          <p>We combine gentle care with cutting-edge technology to ensure your smile stays bright and healthy — from regular cleanings to advanced cosmetic procedures.</p>
+          <div class="service-detail-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+          <h3>24/7 Emergency Services</h3>
+          <p>Round-the-clock emergency department equipped with facilities and trained staff to handle medical emergencies promptly and efficiently.</p>
+        </div>
+      </div>
+      
+      <div class="row mt-5 pt-4">
+        <div class="col-md-6">
+          <img src="/assets/labrotory.jpeg" alt="Laboratory">
+        </div>
+        <div class="col-md-6">
+          <div class="service-detail-icon"><i class="bi bi-microscope"></i></div>
+          <h3>Advanced Laboratory Services</h3>
+          <p>Comprehensive diagnostic testing with advanced technology, ensuring accurate results and quick turnaround times for all patient samples.</p>
+        </div>
+      </div>
+      
+      <div class="row flex-md-row-reverse mt-5 pt-4">
+        <div class="col-md-6">
+          <img src="/assets/othopredic.jpeg" alt="Orthopedic">
+        </div>
+        <div class="col-md-6">
+          <div class="service-detail-icon"><i class="fa-solid fa-bone"></i></div>
+          <h3>Orthopedic Surgery</h3>
+          <p>Expert orthopedic care using minimally invasive techniques and modern surgical equipment for optimal recovery.</p>
+        </div>
+      </div>
+      
+      <div class="row mt-5 pt-4">
+        <div class="col-md-6">
+          <img src="/assets/general.jpeg" alt="General Surgery">
+        </div>
+        <div class="col-md-6">
+          <div class="service-detail-icon"><i class="bi bi-scissors"></i></div>
+          <h3>General Surgery</h3>
+          <p>Comprehensive surgical services with expertise in various surgical procedures and conditions handled by experienced surgeons.</p>
+        </div>
+      </div>
+      
+      <div class="row flex-md-row-reverse mt-5 pt-4">
+        <div class="col-md-6">
+          <img src="/assets/nero.jpeg" alt="Neuro Surgery">
+        </div>
+        <div class="col-md-6">
+          <div class="service-detail-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+          <h3>Neuro Surgery</h3>
+          <p>Specialized neurological and spinal surgeries with advanced technology and experienced neurosurgeons for optimal patient outcomes.</p>
         </div>
       </div>
     </section>
 
-    <div class="text-center">
+    <div class="text-center mt-5">
       <a href="index.html" class="btn back-btn">← Back to Home</a>
-      
     </div>
   </main>
-<!-- Book Appointment Modal -->
-  <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content border-0 shadow-lg">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="bookModalLabel">Book Appointment</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
 
-        <div class="modal-body p-4">
-          <form id="appointmentForm">
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" required>
-            </div>
-            <div class="mb-3">
-              <label for="date" class="form-label">Appointment Date</label>
-              <input type="date" class="form-control" id="date" required>
-            </div>
-            <div class="mb-3">
-              <label for="time" class="form-label">Preferred Time</label>
-              <input type="time" class="form-control" id="time" required>
-            </div>
-            <button type="submit" class="btn btn-getstarted w-100">Confirm Appointment</button>
-          </form>
-
-          <div id="successMessage" class="text-center p-4 d-none animate__animated animate__fadeInUp">
-            <i class="fa-solid fa-circle-check text-success fa-3x mb-3"></i>
-            <h5 class="fw-bold text-success">Appointment Confirmed!</h5>
-            <p class="mb-3 text-muted">We’ve received your details. Our team will contact you soon.</p>
-            <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Scroll to Top Button -->
   <button id="scrollToTopBtn" class="scroll-to-top-btn">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- Footer -->
-<footer class="footer py-5 bg-dark text-white">
-  <div class="container">
-    <div class="row">
-      <!-- Logo and Description -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a class="navbar-brand d-flex align-items-center mb-3" href="./index.html">
-          <img src="./assets/KMS_HOSPITALS_LOGO_DESING_FINAL_2025.png" alt="Healthca Logo"
-            style="height: 70px; width: auto;margin-right: 18px;">
-        </a>
-        <p class="mb-3">Providing compassionate and high-quality healthcare services to our community. Your health is
-          our priority.</p>
-        <div class="social-icons">
-          <a href="#" class="social-link me-2"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-link me-2"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="social-link me-2"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+  <footer class="footer py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="./index.html">
+            <img src="./assets/KMS_HOSPITALS_LOGO_DESING_FINAL_2025.png" alt="Healthca Logo"
+              style="height: 70px; width: auto;margin-right: 18px;">
+          </a>
+          <p class="mb-3">Providing compassionate and high-quality healthcare services to our community. Your health is our priority.</p>
+          <div class="social-icons">
+            <a href="#" class="social-link me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="./about-us.html" class="text-white text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li class="mb-2"><a href="./contact.html" class="text-white text-decoration-none">Contact</a></li>
+            <li class="mb-2"><a href="./help.html" class="text-white text-decoration-none">Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Services</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Emergency</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Ambulance</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 CT Scan</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Pathology & Radiology</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Pharmacy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Contact Us</h5>
+          <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+919124503220"
+              class="text-white text-decoration-none">+91 9124503220</a></p>
+          <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:06722220220"
+              class="text-white text-decoration-none">06722-220220</a></p>
+          <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i>kmsparadeep@gmail.com</p>
+          <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Cuttack Paradeep road, Near Singitali bridge, bhutmundai Jagatsinghpur</p>
+          <p class="mb-0"><i class="bi bi-clock-fill me-2"></i>24*7</p>
         </div>
       </div>
 
-      <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h5 class="fw-bold mb-3">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="./about-us.html" class="text-white text-decoration-none">About Us</a></li>
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <li class="mb-2"><a href="./contact.html" class="text-white text-decoration-none">Contact</a></li>
-          <li class="mb-2"><a href="./help.html" class="text-white text-decoration-none">Help</a></li>
-        </ul>
-      </div>
+      <hr class="my-4">
 
-      <!-- Services -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h5 class="fw-bold mb-3">Services</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Emergency</a></li>
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Ambulance</a></li>
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 CT Scan</a></li>
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Pathology &
-              Radiology</a></li>
-          <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">24*7 Pharmacy</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <h5 class="fw-bold mb-3">Contact Us</h5>
-        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+919124503220"
-            class="text-white text-decoration-none">+91 9124503220</a></p>
-        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:06722220220"
-            class="text-white text-decoration-none">06722-220220</a></p>
-        <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i>kmsparadeep@gmail.com</p>
-        <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Cuttack Paradeep road, Near Singitali bridge,
-          bhutmundai Jagatsinghpur</p>
-        <p class="mb-0"><i class="bi bi-clock-fill me-2"></i>24*7</p>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2026 Briskode Technology Pvt.Ltd. All Rights Reserved.</p>
       </div>
     </div>
-
-    <hr class="my-4">
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2026 Briskode Technology Pvt.Ltd. All Rights Reserved.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/main.js"></script>
